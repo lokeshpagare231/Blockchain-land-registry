@@ -9,6 +9,7 @@ export default function CrossChainBridge() {
   const [messageId, setMessageId] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [ownerPrivateKey, setOwnerPrivateKey] = useState("0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80");
 
   const pollStatus = async (hash) => {
     try {
@@ -50,7 +51,7 @@ export default function CrossChainBridge() {
         body: JSON.stringify({
           propertyId: parseInt(propertyId),
           documentHash: "QmCrossChainBridgeTx",
-          ownerPrivateKey: "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+          ownerPrivateKey: ownerPrivateKey
         })
       });
 
@@ -109,6 +110,17 @@ export default function CrossChainBridge() {
               placeholder="e.g., 1001"
               className="w-full bg-slate-800 border border-slate-700 rounded p-2 text-white focus:outline-none focus:border-cyan-500"
             />
+          </div>
+          <div>
+            <label className="block text-sm text-slate-400 mb-1">Owner Private Key</label>
+            <input
+              type="password"
+              value={ownerPrivateKey}
+              onChange={(e) => setOwnerPrivateKey(e.target.value)}
+              placeholder="0x..."
+              className="w-full bg-slate-800 border border-slate-700 rounded p-2 text-white focus:outline-none focus:border-cyan-500 font-mono text-sm"
+            />
+            <p className="text-xs text-slate-500 mt-1">Must be the private key of the wallet that owns this property.</p>
           </div>
         </div>
 

@@ -14,7 +14,8 @@ const mainLinks = [
 const advancedLinks = [
   { href: "/blockchain-explorer", label: "Blockchain Explorer" },
   { href: "/blockchain-simulator", label: "Blockchain Simulator" },
-  { href: "/network-status", label: "Network Status" }
+  { href: "/network-status", label: "Network Status" },
+  { href: "/crosschain-bridge", label: "Cross-Chain Bridge" }
 ];
 
 function NavItem({ href, label, active, onClick }) {

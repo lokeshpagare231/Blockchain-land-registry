@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-main: #0b1020;
+  --bg-sidebar: #0f162d;
+  --bg-card: #161f3b;
+  --bg-card-soft: #1a2546;
+  --text-main: #e4ebff;
+  --text-soft: #9fb0da;
+  --line: #2d3d69;
+  --accent: #34d399;
+  --accent-2: #60a5fa;
+  --warning: #f59e0b;
+  --danger: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#__next {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--text-main);
+  font-family: "Manrope", sans-serif;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(96, 165, 250, 0.12), transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(52, 211, 153, 0.12), transparent 35%),
+    var(--bg-main);
+  overflow-x: hidden;
+}
+
+code,
+pre,
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+a {
+  color: inherit;
+}
+
+input,
+select,
+textarea {
+  @apply w-full rounded-xl border border-slate-700/80 bg-slate-900/60 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-emerald-400 focus:outline-none;
+}
+
+.panel {
+  @apply rounded-2xl border border-slate-700/80 bg-slate-900/55 shadow-2xl shadow-black/25 backdrop-blur;
+}
+
+.panel-soft {
+  @apply rounded-2xl border border-slate-700/70 bg-slate-900/35;
+}
+
+.btn-primary {
+  @apply rounded-xl bg-emerald-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-emerald-300;
+}
+
+.btn-secondary {
+  @apply rounded-xl border border-slate-600 bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:border-slate-500 hover:bg-slate-700;
+}
+
+.badge-normal {
+  @apply rounded-full border border-emerald-500/40 bg-emerald-500/20 px-2 py-1 text-[11px] font-semibold text-emerald-300;
+}
+
+.badge-suspicious {
+  @apply rounded-full border border-amber-500/40 bg-amber-500/20 px-2 py-1 text-[11px] font-semibold text-amber-300;
+}
+
+.badge-high {
+  @apply rounded-full border border-rose-500/40 bg-rose-500/20 px-2 py-1 text-[11px] font-semibold text-rose-300;
+}
+
+.table-wrap {
+  @apply overflow-x-auto rounded-xl border border-slate-700;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 250ms ease-out both;
+}

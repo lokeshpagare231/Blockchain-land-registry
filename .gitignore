@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+
+# Build outputs
+.next/
+out/
+dist/
+coverage/
+
+# Local env
+.env
+.env.local
+
+# Runtime data
+backend/uploads/
+backend/storage/
+ipfs-service/storage/
+smart-contracts/cache/
+smart-contracts/artifacts/
+
+# Logs
+*.log

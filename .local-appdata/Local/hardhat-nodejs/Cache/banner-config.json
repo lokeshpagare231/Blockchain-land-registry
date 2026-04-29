@@ -1,0 +1,12 @@
+{
+  "bannerConfig": {
+    "enabled": true,
+    "formattedMessages": [
+      "\u001b[1mPlease complete the 2026 Solidity Survey\u001b[22m:\n\n    https://solidity.survey-research.net/solidity-survey\n"
+    ],
+    "minSecondsBetweenDisplays": 18000,
+    "minSecondsBetweenRequests": 86400
+  },
+  "lastDisplayTime": 1773087761814,
+  "lastRequestTime": 1773087761809
+}

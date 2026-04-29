@@ -1,0 +1,15 @@
+{
+  "name": "land-registry-blockchain-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "watch-events": "node watch-events.js",
+    "inspect-chain": "node inspect-chain.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2",
+    "land-registry-system": "file:.."
+  }
+}

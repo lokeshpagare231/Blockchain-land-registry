@@ -1,0 +1,15 @@
+{
+  "name": "land-registry-system",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix smart-contracts install && npm --prefix backend install && npm --prefix frontend install && npm --prefix ipfs-service install && npm --prefix blockchain-scripts install",
+    "blockchain:node": "npm --prefix smart-contracts run node",
+    "blockchain:deploy": "npm --prefix smart-contracts run deploy",
+    "blockchain:seed": "npm --prefix smart-contracts run seed",
+    "backend:dev": "npm --prefix backend run dev",
+    "frontend:dev": "npm --prefix frontend run dev",
+    "ipfs:dev": "npm --prefix ipfs-service run dev",
+    "explorer:scripts": "npm --prefix blockchain-scripts run inspect-chain"
+  }
+}

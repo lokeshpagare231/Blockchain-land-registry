@@ -1,0 +1,23 @@
+If you want manual run (without bat), use 5 terminals in this order:
+
+Blockchain node
+cmd /c npm --prefix smart-contracts run node
+
+Deploy contract
+cmd /c npm --prefix smart-contracts run deploy
+
+Optional: seed demo data
+cmd /c npm --prefix smart-contracts run seed
+
+AI service
+cmd /c python -m uvicorn app.main:app --host 127.0.0.1 --port 8001 --app-dir ai-service
+
+Backend
+cmd /c "set AI_SERVICE_URL=http://127.0.0.1:8001 && npm --prefix backend run start"
+
+Frontend
+cmd /c npm --prefix frontend run dev
+If dependencies are missing (first run), install once:
+
+cmd /c npm run install:all
+cmd /c python -m pip install -r ai-service\requirements.txt

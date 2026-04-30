@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import "../styles/globals.css";
 import { logSecurityAction } from "../lib/api";
+import { AuthProvider } from "../contexts/AuthContext";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -25,5 +26,9 @@ export default function App({ Component, pageProps }) {
     }).catch(() => {});
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <AuthProvider>
+      <Component {...pageProps} />
+    </AuthProvider>
+  );
 }

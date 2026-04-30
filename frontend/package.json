@@ -11,6 +11,7 @@
     "axios": "^1.7.2",
     "chart.js": "^4.4.4",
     "d3": "^7.9.0",
+    "ethers": "^5.7.2",
     "land-registry-system": "file:..",
     "next": "14.2.5",
     "react": "18.3.1",

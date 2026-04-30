@@ -20,7 +20,7 @@ export default function TransactionVolumeChart({ blocks = [] }) {
       {
         label: "Transactions per block",
         data: values,
-        backgroundColor: "rgba(52, 211, 153, 0.6)",
+        backgroundColor: "rgba(99, 102, 241, 0.8)",
         borderRadius: 8,
         borderSkipped: false
       }
@@ -37,25 +37,26 @@ export default function TransactionVolumeChart({ blocks = [] }) {
     },
     scales: {
       x: {
-        ticks: { color: "#94a3b8" },
-        grid: { color: "rgba(71, 85, 105, 0.25)" }
+        ticks: { color: "#475569", font: { weight: 'bold' } },
+        grid: { color: "rgba(226, 232, 240, 0.6)" }
       },
       y: {
         beginAtZero: true,
         ticks: {
           precision: 0,
-          color: "#94a3b8"
+          color: "#475569",
+          font: { weight: 'bold' }
         },
-        grid: { color: "rgba(71, 85, 105, 0.25)" }
+        grid: { color: "rgba(226, 232, 240, 0.6)" }
       }
     }
   };
 
   return (
-    <section className="panel p-4 md:p-6">
-      <h2 className="mb-4 text-lg font-semibold text-slate-100">Transaction Density (Advanced)</h2>
-      <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-3">
-        <div className="h-[280px]">
+    <section className="panel p-4 md:p-6 w-full max-w-full overflow-hidden">
+      <h2 className="mb-4 text-lg font-black text-slate-100">Transaction Density (Advanced)</h2>
+      <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-3 shadow-sm w-full">
+        <div className="h-[280px] w-full relative">
           <Bar data={data} options={options} />
         </div>
       </div>
